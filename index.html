@@ -2,7 +2,30 @@
 <head>
   <title> Hello! </title>
 </head>
-<body>
-  Hello!
+<body style="text-align: center; background-color: greenyellow; font-family: Arial, Helvetica, sans-serif; font-size: 30px;">
+  <marquee id="marquee1">winnner!!!winnner!!!winnner!!!winnner!!!winnner!!!</marquee>
+  <div id="box" style="background-color: indianred; margin: 100px; border: 10px dashed red;">
+    <div id="congrats" style="font-family: cursive; font-size: 69px;">
+      Congralutations!!! !!
+    </div>
+    <p>
+      You have won!
+    </p>
+    <p>
+      Marry Christmas!
+    </p>
+  </div>
+  <marquee id="marquee2">winnner!!!winnner!!!winnner!!!winnner!!!winnner!!!</marquee>
+  <script type="text/javascript">
+    function blinky(id, colors) {
+      var element = document.getElementById(id);
+      var i = 0;
+      setInterval(function() {
+        element.style.color = colors[i];
+        i = (i + 1) % colors.length;
+      }, 200)
+    }
+    blinky('congrats', ['red', 'orange', 'yellow', 'black', 'white'])
+  </script>
 </body>
 </html>
